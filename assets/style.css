@@ -3,7 +3,6 @@
     --secondary-color: #a974f3;
     --tertiary-color: #a7206a;
     --white: #ffffff;
-    --black: #000000;
 }
 
 * {
@@ -23,12 +22,12 @@ section {
 header {
     padding: 20px 35px;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-wrap: wrap;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    background-image: url(../assets/images/hero-img.jpg);
+    background-image: url("../assets/images/hero-img.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: 80%;
@@ -84,21 +83,27 @@ header nav ul li a {
     padding: 0 45px;
     margin: 150px 0 5px 0;
     font-size: 2.5vw;
-    color: 
 }
 
 .section-header {
-    padding-right: 15px;
+    padding-right: 30px;
     font-size: 30px;
     border-right: 3px solid;
     text-align: right;
-    width: 30%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 25%;
+}
+
+.section-header h2 {
+    flex: 1 30%;
 }
 
 #about-me {
     background: var(--secondary-color);
     display: flex;
-    justify-content: center;
+    align-items: center;
+    scroll-margin-top: 5em;
 }
 
 #about-me h2 {
@@ -107,17 +112,38 @@ header nav ul li a {
 
 .about-text {
     padding-left: 25px;
-
+    flex: 1 1 70%;
+    flex-wrap: wrap;
 }
 
 #work {
     background: var(--tertiary-color);
     display: flex;
+    justify-content: center;
+    scroll-margin-top: 5em;
 }
 
 #work h2 {
     color: var(--primary-color);
 }
+
+.project-links {
+    padding-left: 25px;
+    background-size: cover;
+    display: flex;
+    flex: 1 1 70%;
+}
+
+.project-links img {
+    display: flex;
+    flex: 2;
+    width: 100%;
+    opacity: 65%;
+}
+
+/* .project-label {
+    text-decoration: none !important;
+} */
 
 #contact {
     background: var(--primary-color);
@@ -125,20 +151,53 @@ header nav ul li a {
 }
 
 #contact h2 {
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
+}
+
+.contact-info {
+    display: flex;
+    flex: 1 1 70%;
+    text-align: center;
 }
 
 .contact-info ul {
-    text-decoration: none;
+    margin: 0 20px;
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: space-between;
 }
 
 .contact-info ul li {
-    padding: 10px 15px;
+    padding: 10px 40px;
     font-size: 1.55vw;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: var(--tertiary-color);
+}
+
+.contact-info ul li a, .contact-info ul li a:visited {
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
+
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0%;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
 }
