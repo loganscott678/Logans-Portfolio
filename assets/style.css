@@ -92,7 +92,7 @@ header nav ul li a {
     text-align: right;
     display: inline-flex;
     flex-wrap: wrap;
-    width: 25%;
+    width: 20%;
 }
 
 .section-header h2 {
@@ -130,7 +130,7 @@ header nav ul li a {
 .project-links {
     padding-left: 25px;
     background-size: cover;
-    display: flex;
+    display: inline-block;
     flex: 1 1 70%;
 }
 
@@ -140,10 +140,6 @@ header nav ul li a {
     width: 100%;
     opacity: 65%;
 }
-
-/* .project-label {
-    text-decoration: none !important;
-} */
 
 #contact {
     background: var(--primary-color);
